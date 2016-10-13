@@ -1,13 +1,13 @@
 {
-  "name": "aframe-presentation-kit",
+  "name": "w3c-webvr-presentation",
   "version": "1.0.0",
   "description": "Official starter slides for giving talks and presentations about A-Frame.",
   "scripts": {
-    "start": "http-server"
+    "start": "http-server -p 6060"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ngokevin/aframe-presentation-kit.git"
+    "url": "git+https://github.com/ngokevin/w3c-webvr-presentation.git"
   },
   "keywords": [
     "aframe",

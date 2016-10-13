@@ -397,17 +397,10 @@ body:not(.aframe-inspector-opened) .toggle-edit {
   padding: 15px 30px;
 }
 
-.slide__title .talk-title {
-  height: 500px;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
-
-.slide__title .talk-info {
+.talk-info {
   font-weight: 200;
   position: relative;
-  top: 40%;
+  top: 230px;
 }
 
 div.slide__boilerplate {
