@@ -272,14 +272,14 @@ AFRAME.registerComponent('mycomponent', {
 Curated collection of A-Frame components and shaders.
 
 <a class="stretch" href="https://aframe.io/aframe-registry">
-  <video loop src="media/video/registrypreview.mp4" autoplay></video>
+  <video loop data-src="media/video/registrypreview.mp4" data-autoplay></video>
 </a>
 
 ------
 
 ## Angle
 
-<img src="media/img/angle.png" width="300">
+<img data-src="media/img/angle.png" width="300">
 
 CLI to install components from Registry into HTML files.
 
@@ -295,6 +295,37 @@ angle install particle-system
 ------
 
 ## Inspector
+
+Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
+
+<div class="stretch" data-aframe-scene="scenes/80s.html"></div>
+
+------
+
+## Performance
+
+- <!-- .element: class="fragment" -->  Modified `registerElement` and `HTMLElement.prototype` to remove asynchrony
+- <!-- .element: class="fragment" -->  `setAttribute` synchronous + directly updates underlying `Object3D`s
+- <!-- .element: class="fragment" -->  Developer-set HTML attributes cached. Run-time updates done in memory
+- <!-- .element: class="fragment" -->  Disabled serialization back to DOM
+
+------
+
+<!-- .slide: data-background-video="media/video/a-painter.mp4" data-background-video-muted data-state="state--bg-dark" -->
+
+## A-Painter
+
+Paint in VR in the browser.
+
+------
+
+<!-- .slide: data-background="media/img/a-painter-logo.jpg" data-state="state--bg-dark" -->
+
+## A-Painter
+
+Share VR paintings with just links.
+
+<iframe class="stretch" data-src="https://aframe.io/a-painter/?url=https://ucarecdn.com/962b242b-87a9-422c-b730-febdc470f203/"></iframe>
 
 ------
 
@@ -344,14 +375,12 @@ iStaging
 
 ------
 
-# Augmented Reality
+<!-- .slide: data-background="media/img/a-shooter-concept.jpg" -->
 
-<video class="stretch" data-src="media/video/argon.mp4" data-autoplay loop></video>
+## A-Shooter
 
-<!-- NOTES -->
-- Not just a framework for VR, can also handle 3D and AR as well
-- Prototype by Blair MacIntyre from Georgia Tech with Argon Browser
-- Most predict AR to be even bigger market than VR
+<video class="stretch" data-src="media/video/a-shooter.mp4" data-autoplay loop muted
+  style="opacity: 0.95">
 
 ------
 
