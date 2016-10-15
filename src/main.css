@@ -300,6 +300,10 @@ html:-moz-full-screen-ancestor {
   background: #111;
 }
 
+.state--bg-dark h2 {
+  color: #FAFAFA;
+}
+
 .state--bg-blue body {
   background: #30D8FC;
 }

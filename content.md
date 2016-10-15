@@ -1,4 +1,4 @@
-<!-- .slide: data-background="media/img/aframe-rendered-full.png" -->
+<!-- .slide: data-background="media/img/aframe.png" -->
 
 <div class="talk-title">
   <h1>A-Frame</h1>
@@ -9,15 +9,15 @@
 </div>
 
 <!-- NOTES -->
-- Easy for web developers to create VR content, without graphics knowledge
-- Prototype and experiment WebVR and VR UX faster
-- Vehicle to kickstart WebVR ecosystem
+- Easy for web developers to create VR content
+- Prototype WebVR and VR UX faster
+- Create a thriving ecosystem around WebVR
 
 ------
 
 ## Hello World
 
-<!-- .slide: data-transition="slide-in none" -->
+<!-- .slide: data-background="media/img/aframe.png" data-transition="slide-in none" -->
 
 ```html
 <html>
@@ -34,13 +34,17 @@
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Explain boilerplate `<a-scene>` handles
+- Just a plain HTML file, no need to install anything or build steps
+- Using Custom Elements, `<a-scene>` handles tons 3D and WebVR boilerplate alone
+  - Canvas, camera, renderer, lights, controls, render loop
+  - WebVR polyfill, VREffect
+- Put stuff inside our scene...
 
 ------
 
 ## Hello World
 
-<!-- .slide: data-transition="fade-in slide-out" -->
+<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
 
 ```html
 <html>
@@ -57,47 +61,42 @@
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Simple HTML markup for a basic scene
-- Remember to manipulate on second display
+- Add HTML elements that represent 3D primitives
 - Readable: HTML arguably most accessible language in computing
 - Declarative: visual representation of scene graph, fully represents state
-- Encapsulated: copy-and-paste HTML anywhere else and still work, no variables
-
-------
-
-## Hello World
-
-<!-- .slide: data-transition="none" -->
-
-<div class="stretch" data-aframe-scene="scenes/hello-world.html"></div>
+- Encapsulated: copy-and-paste HTML anywhere else and still work, no state or variables
+- Quickly look at a live example...
 
 ------
 
 ## Hello Metaverse
 
-<!-- .slide: data-transition="none" -->
+<!-- .slide: data-transition="none" data-state="state--bg-dark" -->
 
 <div class="stretch" data-aframe-scene="scenes/80s.html"></div>
 
 <!-- NOTES -->
-- As web technology, we can embed within slides
-- Can view this in desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
-- View source in DOM inspector and change values live
-- Based on DOM, compatible with all libraries/frameworks: d3.js, Vue.js, React
+- A-Frame scene by Ada Rose Edwards running from inside my HTML slides
+- Works on desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
+- *Action:* View source in DOM inspector and change text value live
 
 ------
 
-```html
-<a-animation> <a-box> <a-camera> <a-circle> <a-collada-model>
-<a-cone> <a-cursor> <a-curvedimage> <a-cylinder>
-<a-dodecahedron> <a-isocahedron> <a-image> <a-light>
-<a-obj-model> <a-plane> <a-ring> <a-tetrahedron> <a-torus>
-<a-torus-knot> <a-sky> <a-sound> <a-sphere> <a-videosphere>
-```
+## Works With Everything Under the Sun
 
-<!-- NOTES -->
-- Handful elements that ship with A-Frame, but this is just the start
-- Pretty easy to get a WebVR scene up and running
+- React
+- d3.js
+- jQuery
+- Vue.js
+- Angular
+- Mustache / Handlebars / Nunjucks / Jade / Underscore / EJS
+- Ember.js
+- Meteor.js
+- Mithril
+
+- Since just HTML, compatible with all existing libraries/frameworks: $/d3/Vue/React/Angular
+- HTML is a sturdy bridge between WebGL and everything else
+- Super easy to learn. Can do a lot with simple HTML elements, but to create compelling VR experiences, we need more power...
 
 ------
 
@@ -106,24 +105,18 @@
 <!-- .slide: data-background="media/img/minecraft-blocks.png" -->
 
 <!-- NOTES -->
-- Pattern popular in game development, used in game engines like Unity
+- At A-Frame's core is an entity-component-system pattern
+- Popular in game development, used by Unity
 - All objects in scene are **entities** that inherently empty objects. Plug in
   **components** to attach appearance / behavior / functionality
-- Favors composition over inheritance
+- Favors composition over inheritance. 3D is different, objects have complex appearance and behavior as opposed to 2D where everything is a fixed block.
 - Minecraft analogy: all blocks are entities, mix-and-match components to
   create different kinds of blocks (appearance, physics, behavior, sound, strength)
+- What does this look like in A-Frame...
 
 ------
 
-<!-- .slide: data-background="media/img/entity-component-system.png" data-background-size="contain" data-state="state--bg-white" -->
-
-<!-- NOTES -->
-- Additional analogies: smartphone, vehicle
-- AFAIK A-Frame first tool to make ECS declarative
-
-------
-
-<!-- .slide: data-transition="slide-in none" -->
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="slide-in none" -->
 
 ## Composing an Entity
 
@@ -139,9 +132,9 @@
 
 ------
 
-<!-- .slide: data-transition="fade-in none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
@@ -152,9 +145,9 @@
 
 ------
 
-<!-- .slide: data-transition="fade-in none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
@@ -166,9 +159,9 @@
 
 ------
 
-<!-- .slide: data-transition="fade-in none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
@@ -182,9 +175,9 @@
 
 ------
 
-<!-- .slide: data-transition="fade-in none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
@@ -197,9 +190,9 @@
 
 ------
 
-<!-- .slide: data-transition="fade-in none" -->
-
 ## Composing an Entity
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```html
 <a-entity
@@ -214,6 +207,8 @@
 ------
 
 ## Registering a Component
+
+<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
 
 ```js
 AFRAME.registerComponent('mycomponent', {
@@ -237,6 +232,8 @@ AFRAME.registerComponent('mycomponent', {
 ```
 
 <!-- NOTES -->
+- Can do anything within a component (full access to three.js, JavaScript, APIs) can get
+  exposed declaratively
 - `schema`: defines how data is parsed from HTML
 - Lifecycle methods:
   - `init`: component attached, like `componentDidMount`
@@ -269,7 +266,9 @@ AFRAME.registerComponent('mycomponent', {
 
 ## Registry
 
-Curated collection of A-Frame components and shaders.
+<!-- .slide: data-background="media/img/aframe-side.png" -->
+
+Curated collection of A-Frame components/shaders.
 
 <a class="stretch" href="https://aframe.io/aframe-registry">
   <video loop data-src="media/video/registrypreview.mp4" data-autoplay></video>
@@ -279,9 +278,11 @@ Curated collection of A-Frame components and shaders.
 
 ## Angle
 
+<!-- .slide: data-background="media/img/aframe-side.png" -->
+
 <img data-src="media/img/angle.png" width="300">
 
-CLI to install components from Registry into HTML files.
+A-Frame CLI. Install components into HTML files.
 
 ```bash
 npm install -g angle
@@ -299,6 +300,59 @@ angle install particle-system
 Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
 
 <div class="stretch" data-aframe-scene="scenes/80s.html"></div>
+
+------
+
+## aframe-react
+
+<img data-src="media/img/aframe-react.jpg" width="240">
+
+```js
+import 'aframe';
+import 'aframe-animation-component';
+import 'aframe-bmfont-text-component';
+import {Entity, Scene} from 'aframe-react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class VRScene extends React.Component {
+  render () {
+    return (
+      <Scene>
+        <Entity id="box"
+          geometry={{primitive: 'box'}}
+          material="color: red" position="0 0 -5"
+          onClick={() => {console.log('Clicked!');}}/>
+
+        <Entity id="text"
+          animation={{property: "rotation"; loop: true; to: "0 360 0"}}
+          bmfont-text={{text: 'Hello World!'}}
+          position="0 1 -5"/>
+      </Scene>
+    );
+  }
+}
+```
+
+------
+
+## A-Frame Mixin Style Sheets
+
+```css
+red { material { color: #393E51; } }
+white { material { color: #E9E6C9; } }
+blue { material { color: #566683; } }
+box { geometry { primitive: box; } }
+sphere { geometry { primitive: sphere; } }
+spinning { animation { attribute: rotation; loop: true; to: 0 360 0 } }
+```
+
+```
+<a-style src="index.mss"></a-style>
+<a-entity mixin="blue sphere"></a-entity>
+<a-entity mixin="spinning red box"></a-entity>
+<a-entity mixin="white" text="text: I am white."></a-entity>
+```
 
 ------
 
@@ -326,52 +380,6 @@ Paint in VR in the browser.
 Share VR paintings with just links.
 
 <iframe class="stretch" data-src="https://aframe.io/a-painter/?url=https://ucarecdn.com/962b242b-87a9-422c-b730-febdc470f203/"></iframe>
-
-------
-
-<!-- .slide: data-background="media/img/360syria.jpg" -->
-
-## Fear of the Sky
-
-Amnesty International UK
-
-[360syria.com](http://360syria.com)
-
-<!-- NOTES -->
-- Journalism, e-commerce, and real estate popular production use cases
-
-------
-
-## Stand at the Edge of Geologic Time
-
-<!-- .slide: data-background="media/img/npr.png" -->
-
-National Public Radio (NPR)
-
-[apps.npr.org/rockymountain-vr](http://apps.npr.org/rockymountain-vr/)
-
-------
-
-<!-- .slide: data-background="media/img/mars.jpg" -->
-
-## Journey to Mars
-
-The Washington Post
-
-[washingtonpost.com/video/mars/public/](https://www.washingtonpost.com/video/mars/public/)
-
-------
-
-<!-- .slide: data-background-video="media/video/livetour.mp4" data-background-video-loop="true" -->
-
-## LiveTour
-
-iStaging
-
-[vrviewer.istaging.co/#!/684173](http://vrviewer.istaging.co/#!/684173)
-
-<!-- NOTES -->
-- Virtual real estate and apartment tours
 
 ------
 
