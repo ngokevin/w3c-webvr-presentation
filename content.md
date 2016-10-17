@@ -9,9 +9,10 @@
 </div>
 
 <!-- NOTES -->
-- Easy for web developers to create VR content
-- Prototype WebVR and VR UX faster
-- Create a thriving ecosystem around WebVR
+- On-board for web developers to creating VR content, otherwise 3D intimidating.
+- Prototype WebVR experiences faster
+- Kickstart a content ecosystem on top of WebVR to push the platform
+- Become the most popular way to produce WebVR content today
 
 ------
 
@@ -63,7 +64,6 @@
 <!-- NOTES -->
 - Add HTML elements that represent 3D primitives
 - Readable: HTML arguably most accessible language in computing
-- Declarative: visual representation of scene graph, fully represents state
 - Encapsulated: copy-and-paste HTML anywhere else and still work, no state or variables
 - Quickly look at a live example...
 
@@ -78,7 +78,8 @@
 <!-- NOTES -->
 - A-Frame scene by Ada Rose Edwards running from inside my HTML slides
 - Works on desktop, Android, iOS, Samsung Gear VR, Oculus Rift, HTC Vive
-- *Action:* View source in DOM inspector and change text value live
+- Could open up the DOM Inspector to change values live
+- Since it's just HTML...
 
 ------
 
@@ -113,9 +114,9 @@
 
 <!-- NOTES -->
 
-- Since just HTML, compatible with all existing libraries/frameworks: $/d3/Vue/React/Angular
-- HTML is a sturdy bridge between WebGL and everything else
-- Super easy to learn. Can do a lot with simple HTML elements, but to create compelling VR experiences, we need more power...
+- Based on HTML, compatible with all existing/future libraries/frameworks: $/d3/Vue/React/Angular
+- Good reason to have HTML as an intermediary layer between WebGL/three.js
+- A-Frame itself is powerful and extensible...
 
 ------
 
@@ -131,73 +132,13 @@
 - Favors composition over inheritance. 3D is different, objects have complex appearance and behavior as opposed to 2D where everything is a fixed block.
 - Minecraft analogy: all blocks are entities, mix-and-match components to
   create different kinds of blocks (appearance, physics, behavior, sound, strength)
-- What does this look like in A-Frame...
-
-------
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="slide-in none" -->
-
-## Composing an Entity
-
-```html
-<a-entity>
-```
-<!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- Start with an `<a-entity>`
-- By itself, has no appearance, behavior, functionality
-- Plug in components to add appearance, behavior, functionality
-
-------
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  geometry="primitive: sphere; radius: 1.5"
-  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture">
-```
-<!-- .element: class="stretch" -->
-
-------
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  geometry="primitive: sphere; radius: 1.5"
-  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2">
-```
-<!-- .element: class="stretch" -->
-
-------
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  geometry="primitive: sphere; radius: 1.5"
-  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: spline; speed: 4">
-```
 
 ------
 
 <!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
 <!-- NOTES -->
-- Components that ship with A-Frame
-- Bare bones, allow ecosystem to enable features
+- Some standard components that ship with A-Frame
 
 ------
 
@@ -205,8 +146,7 @@
 
 <!-- NOTES -->
 - Components built by the community and ecosystem
-- Developers enabling others
-- Components can be consumed without programming knowledge
+- Can have components for physics, oceans, mountains that can be dropped in as a `<script>` tag and used straight from HTML...
 
 ------
 
@@ -235,20 +175,15 @@ Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
 
 ------
 
-## Performance
-
-- <!-- .element: class="fragment" -->  Modified `registerElement` and `HTMLElement.prototype` to remove asynchrony
-- <!-- .element: class="fragment" -->  `setAttribute` synchronous + directly updates underlying `Object3D`s
-- <!-- .element: class="fragment" -->  Developer-set HTML attributes cached. Run-time updates done in memory
-- <!-- .element: class="fragment" -->  Disabled serialization back to DOM
-
-------
-
 <!-- .slide: data-background-video="media/video/a-painter.mp4" data-background-video-muted="true" data-state="state--bg-dark" -->
 
 ## A-Painter
 
 Paint in VR in the browser.
+
+<!-- NOTES -->
+- Performance
+- 90+fps room-scale TiltBrush experience in a few weeks with A-Frame
 
 ------
 
