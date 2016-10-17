@@ -300,7 +300,8 @@ html:-moz-full-screen-ancestor {
   background: #111;
 }
 
-.state--bg-dark h2 {
+.state--bg-dark h2,
+.state--bg-dark p {
   color: #FAFAFA;
 }
 
@@ -437,4 +438,19 @@ div.slide__boilerplate + video {
 
 .reveal li {
   margin: 30px 0;
+}
+
+.reveal .icon-title {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.reveal .icon-title img {
+  margin: 0;
+  padding-right: 15px;
+}
+
+.reveal .icon-title h2 {
+  margin: 0;
 }

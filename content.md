@@ -82,17 +82,36 @@
 
 ------
 
-## Works With Everything Under the Sun
+## Works With Everything
 
-- React
-- d3.js
-- jQuery
-- Vue.js
-- Angular
-- Mustache / Handlebars / Nunjucks / Jade / Underscore / EJS
-- Ember.js
-- Meteor.js
-- Mithril
+<div class="captioned-image-row">
+  <div>
+    <img data-src="media/img/react.png">
+    <i>React</i>
+  </div>
+  <div>
+    <img data-src="media/img/d3.png">
+    <i>d3.js</i>
+  </div>
+  <div>
+    <img data-src="media/img/vue.png">
+    <i>Vue.js</i>
+  </div>
+  <div>
+    <img data-src="media/img/angular.png">
+    <i>Angular</i>
+  </div>
+  <div>
+    <img data-src="media/img/jquery.png">
+    <i>jQuery</i>
+  </div>
+  <div>
+    <img data-src="media/img/ember.png">
+    <i>Ember.js</i>
+  </div>
+</div>
+
+<!-- NOTES -->
 
 - Since just HTML, compatible with all existing libraries/frameworks: $/d3/Vue/React/Angular
 - HTML is a sturdy bridge between WebGL and everything else
@@ -264,7 +283,10 @@ AFRAME.registerComponent('mycomponent', {
 
 ------
 
-## Registry
+<div class="icon-title">
+  <img data-src="media/img/registry.png" width="64">
+  <h2>Registry</h2>
+</div>
 
 <!-- .slide: data-background="media/img/aframe-side.png" -->
 
@@ -276,11 +298,12 @@ Curated collection of A-Frame components/shaders.
 
 ------
 
-## Angle
+<div class="icon-title">
+  <img data-src="media/img/angle.png" width="128">
+  <h2>Angle</h2>
+</div>
 
 <!-- .slide: data-background="media/img/aframe-side.png" -->
-
-<img data-src="media/img/angle.png" width="300">
 
 A-Frame CLI. Install components into HTML files.
 
@@ -297,15 +320,18 @@ angle install particle-system
 
 ## Inspector
 
+<!-- .slide: data-background="media/img/inspector.png" data-state="state--bg-dark" -->
+
 Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
 
 <div class="stretch" data-aframe-scene="scenes/80s.html"></div>
 
 ------
 
-## aframe-react
-
-<img data-src="media/img/aframe-react.jpg" width="240">
+<div class="icon-title">
+  <img data-src="media/img/aframe-react.jpg" width="128">
+  <h2>aframe-react</h2>
+</div>
 
 ```js
 import 'aframe';
@@ -333,10 +359,14 @@ class VRScene extends React.Component {
   }
 }
 ```
+<!-- .element: class="stretch" -->
 
 ------
 
-## A-Frame Mixin Style Sheets
+<div class="icon-title">
+  <img data-src="media/img/mss.png" width="64">
+  <h2>Mixin Style Sheets</h2>
+</div>
 
 ```css
 red { material { color: #393E51; } }
@@ -365,7 +395,7 @@ spinning { animation { attribute: rotation; loop: true; to: 0 360 0 } }
 
 ------
 
-<!-- .slide: data-background-video="media/video/a-painter.mp4" data-background-video-muted data-state="state--bg-dark" -->
+<!-- .slide: data-background-video="media/video/a-painter.mp4" data-background-video-muted="true" data-state="state--bg-dark" -->
 
 ## A-Painter
 
