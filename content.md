@@ -190,79 +190,6 @@
   animation="property: rotation; loop: true; to: 0 360 0"
   movement-pattern="type: spline; speed: 4">
 ```
-<!-- .element: class="stretch" -->
-
-------
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  json-model="src: #robot"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: spline; speed: 4">
-```
-<!-- .element: class="stretch" -->
-
-------
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  json-model="src: #robot"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: attack; target: #player"
-  explode="on: hit">
-```
-<!-- .element: class="stretch" -->
-
-------
-
-## Registering a Component
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```js
-AFRAME.registerComponent('mycomponent', {
-  schema: {
-    foo: {type: 'selector'},
-    bar: {default: 256}
-  },
-
-  init: function () { // ... },
-  update: function () { // ... },
-  remove: function () { // ... },
-  tick: function () { // ... },
-  pause: function () { // ... },
-  play: function () { // ... }
-});
-```
-<!-- .element: class="stretch" -->
-
-```html
-<a-box mycomponent="foo: #box; bar: 300"></a-box>
-```
-
-<!-- NOTES -->
-- Can do anything within a component (full access to three.js, JavaScript, APIs) can get
-  exposed declaratively
-- `schema`: defines how data is parsed from HTML
-- Lifecycle methods:
-  - `init`: component attached, like `componentDidMount`
-  - `update`: component data update, like `componentWillReceiveProps`
-  - `remove`: component detached, like `componentWillUnmount`
-  - `tick`: run on every frame
-- Properties:
-  - `el`: reference to entity element
-  - `data`: component data parsed from HTML
-  - `object3D`: three.js object
 
 ------
 
@@ -298,26 +225,6 @@ Curated collection of A-Frame components/shaders.
 
 ------
 
-<div class="icon-title">
-  <img data-src="media/img/angle.png" width="128">
-  <h2>Angle</h2>
-</div>
-
-<!-- .slide: data-background="media/img/aframe-side.png" -->
-
-A-Frame CLI. Install components into HTML files.
-
-```bash
-npm install -g angle
-angle createapp
-angle install aframe-physics-system
-angle install mountain
-angle install ocean
-angle install particle-system
-```
-
-------
-
 ## Inspector
 
 <!-- .slide: data-background="media/img/inspector.png" data-state="state--bg-dark" -->
@@ -325,64 +232,6 @@ angle install particle-system
 Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
 
 <div class="stretch" data-aframe-scene="scenes/80s.html"></div>
-
-------
-
-<div class="icon-title">
-  <img data-src="media/img/aframe-react.jpg" width="128">
-  <h2>aframe-react</h2>
-</div>
-
-```js
-import 'aframe';
-import 'aframe-animation-component';
-import 'aframe-bmfont-text-component';
-import {Entity, Scene} from 'aframe-react';
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-class VRScene extends React.Component {
-  render () {
-    return (
-      <Scene>
-        <Entity id="box"
-          geometry={{primitive: 'box'}}
-          material="color: red" position="0 0 -5"
-          onClick={() => {console.log('Clicked!');}}/>
-
-        <Entity id="text"
-          animation={{property: "rotation"; loop: true; to: "0 360 0"}}
-          bmfont-text={{text: 'Hello World!'}}
-          position="0 1 -5"/>
-      </Scene>
-    );
-  }
-}
-```
-<!-- .element: class="stretch" -->
-
-------
-
-<div class="icon-title">
-  <img data-src="media/img/mss.png" width="64">
-  <h2>Mixin Style Sheets</h2>
-</div>
-
-```css
-red { material { color: #393E51; } }
-white { material { color: #E9E6C9; } }
-blue { material { color: #566683; } }
-box { geometry { primitive: box; } }
-sphere { geometry { primitive: sphere; } }
-spinning { animation { attribute: rotation; loop: true; to: 0 360 0 } }
-```
-
-```
-<a-style src="index.mss"></a-style>
-<a-entity mixin="blue sphere"></a-entity>
-<a-entity mixin="spinning red box"></a-entity>
-<a-entity mixin="white" text="text: I am white."></a-entity>
-```
 
 ------
 
@@ -413,15 +262,6 @@ Share VR paintings with just links.
 
 ------
 
-<!-- .slide: data-background="media/img/a-shooter-concept.jpg" -->
-
-## A-Shooter
-
-<video class="stretch" data-src="media/video/a-shooter.mp4" data-autoplay loop muted
-  style="opacity: 0.95">
-
-------
-
 # aframe.io
 
 <div class="captioned-image-row">
@@ -431,7 +271,7 @@ Share VR paintings with just links.
   </div>
   <div>
     <img data-src="media/img/slack.png">
-    <i>1700 members on Slack</i>
+    <i>1750 members on Slack</i>
   </div>
   <div>
     <img data-src="media/img/scene-collage-circle.png">
