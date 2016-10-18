@@ -317,6 +317,7 @@ html:-moz-full-screen-ancestor {
 [data-background] h2,
 [data-background] li,
 [data-background] p,
+[data-background] i,
 [data-background-video] h1,
 [data-background-video] h2,
 [data-background-video] li,
@@ -453,4 +454,9 @@ div.slide__boilerplate + video {
 
 .reveal .icon-title h2 {
   margin: 0;
+}
+
+.aframe-inspector-opened .slides {
+  margin: 0 !important;
+  zoom: 1 !important;
 }

@@ -1,4 +1,4 @@
-<!-- .slide: data-background="media/img/aframe.png" -->
+<!-- .slide: data-background="media/img/aframe.jpg" -->
 
 <div class="talk-title">
   <h1>A-Frame</h1>
@@ -62,7 +62,7 @@
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Add HTML elements that represent 3D primitives
+- Basic 3D primitives with Custom Elements
 - Readable: HTML arguably most accessible language in computing
 - Encapsulated: copy-and-paste HTML anywhere else and still work, no state or variables
 - Quickly look at a live example...
@@ -83,13 +83,11 @@
 
 ------
 
+<!-- .slide: data-background="media/img/aframe.jpg" -->
+
 ## Works With Everything
 
 <div class="captioned-image-row">
-  <div>
-    <img data-src="media/img/react.png">
-    <i>React</i>
-  </div>
   <div>
     <img data-src="media/img/d3.png">
     <i>d3.js</i>
@@ -99,8 +97,8 @@
     <i>Vue.js</i>
   </div>
   <div>
-    <img data-src="media/img/angular.png">
-    <i>Angular</i>
+    <img data-src="media/img/react.png">
+    <i>React</i>
   </div>
   <div>
     <img data-src="media/img/jquery.png">
@@ -110,13 +108,17 @@
     <img data-src="media/img/ember.png">
     <i>Ember.js</i>
   </div>
+  <div>
+    <img data-src="media/img/angular.png">
+    <i>Angular</i>
+  </div>
 </div>
 
 <!-- NOTES -->
 
 - Based on HTML, compatible with all existing/future libraries/frameworks: $/d3/Vue/React/Angular
 - Good reason to have HTML as an intermediary layer between WebGL/three.js
-- A-Frame itself is powerful and extensible...
+- Ultimately, a declarative and extensible framework for three.js
 
 ------
 
