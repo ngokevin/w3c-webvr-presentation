@@ -71,7 +71,9 @@
 
 ## Hello Metaverse
 
-<!-- .slide: data-transition="none" data-state="state--bg-dark" -->
+<i>by @lady_ada_king</i>
+
+<!-- .slide: data-background="media/img/metaverse.png" -->
 
 <div class="stretch" data-aframe-scene="scenes/80s.html"></div>
 
@@ -101,12 +103,12 @@
     <i>React</i>
   </div>
   <div>
-    <img data-src="media/img/jquery.png">
-    <i>jQuery</i>
+    <img data-src="media/img/redux.png">
+    <i>Redux</i>
   </div>
   <div>
-    <img data-src="media/img/ember.png">
-    <i>Ember.js</i>
+    <img data-src="media/img/jquery.png">
+    <i>jQuery</i>
   </div>
   <div>
     <img data-src="media/img/angular.png">

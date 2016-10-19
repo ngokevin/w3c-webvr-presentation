@@ -1,4 +1,4 @@
-<a-scene inspector="url: http://localhost:3333/build/aframe-inspector.js">
+<a-scene inspector="url: https://ngokevin.github.io/aframe-inspector/dist/aframe-inspector.min.js">
   <a-assets>
     <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg">
     <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid">
@@ -6,11 +6,11 @@
     <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg">
   </a-assets>
 
-  <a-entity scale="2 2 2" geometry="primitive: torusKnot;" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
+  <a-entity id="knot" scale="2 2 2" geometry="primitive: torusKnot;" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
     <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
   </a-entity>
 
-  <a-entity position="-3 1 -6" rotation="5 0 0">
+  <a-entity id="textWrapper" position="-3 1 -6" rotation="5 0 0">
     <a-entity id="virtualReality"
       rotation="0 0 5"
       position="0 2 0.2"
@@ -38,7 +38,7 @@
     ></a-entity>
   </a-entity>
 
-  <a-entity
+  <a-entity id="grid"
     geometry="primitive: plane; width: 10000; height: 10000;"
     rotation="-90 0 0"
     material="src: #grid; repeat: 10000 10000; transparent: true; metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"
