@@ -133,7 +133,7 @@
 - Popular in game development, used by Unity
 - All objects in scene are **entities** that inherently empty objects. Plug in
   **components** to attach appearance / behavior / functionality
-- Favors composition over inheritance
+- Not going to go into detail about the syntax for this
 - 2D web where every element was fixed
 - 3D/VR is different, objects of infinite types and complexities, need an easy way to build up different kinds of objects
 
@@ -142,8 +142,8 @@
 <!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
 <!-- NOTES -->
-- Some components that ship with A-Frame
-- A-Frame is fully extensible so...
+- These are some components that ship with A-Frame
+- A-Frame is fully extensible at its core so...
 
 ------
 
@@ -152,9 +152,10 @@
 <!-- NOTES -->
 - the community has filled the ecosystem with tons of components
 - Components can do whatever they want, have full access to three.js and Web APIs
+- The component ecosystem the lifeblood of A-Frame
 - Physics, leap motion, particle systems, audio visualizations, oceans
 - Drop these components as script tags and use them straight from HTML
-- Trickle-down power, advanced developers empowering other developers
+- Advanced developers empowering other developers
 - Working on collecting these components...
 
 ------
@@ -198,16 +199,6 @@ Paint in VR in the browser.
 <!-- NOTES -->
 - A-Frame is very powerful
 - 90+fps room-scale TiltBrush experience in a few weeks with just A-Frame
-
-------
-
-<!-- .slide: data-background="media/img/a-painter-logo.jpg" data-state="state--bg-dark" -->
-
-## A-Painter
-
-Share VR paintings with just links.
-
-<iframe class="stretch" data-src="https://aframe.io/a-painter/?url=https://ucarecdn.com/962b242b-87a9-422c-b730-febdc470f203/"></iframe>
 
 ------
 
