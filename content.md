@@ -4,15 +4,13 @@
   <h1>A-Frame</h1>
   <p>A web framework for building VR experiences</p>
   <p class="talk-info">
-    @andgokevin | Mozilla VR | aframe.io
+    @andgokevin | Mozilla VR | **aframe.io**
   </p>
 </div>
 
 <!-- NOTES -->
-- On-board for web developers to creating VR content, otherwise 3D intimidating.
+- Onboard web developers into the 3D and VR world with easy-to-use tools
 - Prototype WebVR experiences faster
-- Kickstart a content ecosystem on top of WebVR to push the platform
-- Become the most popular way to produce WebVR content today
 
 ------
 
@@ -35,10 +33,11 @@
 <!-- .element: class="stretch" -->
 
 <!-- NOTES -->
-- Just a plain HTML file, no need to install anything or build steps
-- Using Custom Elements, `<a-scene>` handles tons 3D and WebVR boilerplate alone
-  - Canvas, camera, renderer, lights, controls, render loop
-  - WebVR polyfill, VREffect
+- Just HTML
+- Drop a script tag, no build steps
+- Using Custom HTML Elements
+- One line of HTML `<a-scene>` handles
+  - canvas, camera, renderer, lights, controls, render loop, WebVR polyfill, VREffect
 - Put stuff inside our scene...
 
 ------
@@ -71,7 +70,7 @@
 
 ## Hello Metaverse
 
-<i>by @lady_ada_king</i>
+<i>by Ada Rose Edwards (@lady_ada_king)</i>
 
 <!-- .slide: data-background="media/img/metaverse.png" -->
 
@@ -118,9 +117,10 @@
 
 <!-- NOTES -->
 
-- Based on HTML, compatible with all existing/future libraries/frameworks: $/d3/Vue/React/Angular
+- Based on HTML, compatible with all existing libraries/frameworks
 - Good reason to have HTML as an intermediary layer between WebGL/three.js
-- Ultimately, a declarative and extensible framework for three.js
+- All tools were on top of the notion of HTML
+- Under the hood, A-Frame is an extensible, declarative framework for three.js...
 
 ------
 
@@ -129,28 +129,33 @@
 <!-- .slide: data-background="media/img/minecraft-blocks.png" -->
 
 <!-- NOTES -->
-- At A-Frame's core is an entity-component-system pattern
+- Is an entity-component framework
 - Popular in game development, used by Unity
 - All objects in scene are **entities** that inherently empty objects. Plug in
   **components** to attach appearance / behavior / functionality
-- Favors composition over inheritance. 3D is different, objects have complex appearance and behavior as opposed to 2D where everything is a fixed block.
-- Minecraft analogy: all blocks are entities, mix-and-match components to
-  create different kinds of blocks (appearance, physics, behavior, sound, strength)
+- Favors composition over inheritance
+- 2D web where every element was fixed
+- 3D/VR is different, objects of infinite types and complexities, need an easy way to build up different kinds of objects
 
 ------
 
 <!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
 
 <!-- NOTES -->
-- Some standard components that ship with A-Frame
+- Some components that ship with A-Frame
+- A-Frame is fully extensible so...
 
 ------
 
 <!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
 
 <!-- NOTES -->
-- Components built by the community and ecosystem
-- Can have components for physics, oceans, mountains that can be dropped in as a `<script>` tag and used straight from HTML...
+- the community has filled the ecosystem with tons of components
+- Components can do whatever they want, have full access to three.js and Web APIs
+- Physics, leap motion, particle systems, audio visualizations, oceans
+- Drop these components as script tags and use them straight from HTML
+- Trickle-down power, advanced developers empowering other developers
+- Working on collecting these components...
 
 ------
 
@@ -166,6 +171,11 @@ Curated collection of A-Frame components/shaders.
 <a class="stretch" href="https://aframe.io/aframe-registry">
   <video loop data-src="media/video/registrypreview.mp4" data-autoplay></video>
 </a>
+
+<!-- NOTES -->
+- Collecting them into the A-Frame registry
+- Like a store of components that we make sure work well
+- People can browse and search for components or install them....
 
 ------
 
@@ -186,8 +196,8 @@ Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
 Paint in VR in the browser.
 
 <!-- NOTES -->
-- Performance
-- 90+fps room-scale TiltBrush experience in a few weeks with A-Frame
+- A-Frame is very powerful
+- 90+fps room-scale TiltBrush experience in a few weeks with just A-Frame
 
 ------
 
